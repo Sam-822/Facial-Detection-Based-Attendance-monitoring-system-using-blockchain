@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript">
+    <img src="{{ url_for('video_feed') }}" width="100%"></img>
+  </script>
+  <link rel="stylesheet" href="static/take.css">
+  <title>Attendance</title>
+</head>
+<section id="header">
+  <div class="header container">
+    <div class="nav-bar">
+      <div class="brand">
+        <a href="{{ url_for('home')}}">
+          <h1><span>A</span>ttandance <span>M</span>onitoring <span>S</span><span>ystem</span></h1>
+        </a>
+      </div>
+      <div class="nav-list">
+        <div class="hamburger">
+          <div class="bar"></div>
+        </div>
+        <ul>
+          <li><a>Welcome, {{session.username}}</a></li>
+          <li><a href="{{ url_for('home')}}" target="_self">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<body style="position: absolute;left: 650px;" >
+
+  <section class="login">
+    <div class="con">
+      <label for="Attendance"
+        style="position: absolute;font: 2em sans-serif; padding: 10px;background-color:crimson;width:fit-content;border-radius: 0.5rem; left: 20px;">
+        MARK THE ATTENDANCE</label>
+
+      <select type="text" id="email">
+        <option value="volvo">English</option>
+        <option value="saab">Hindi</option>
+        <option value="mercedes">Maths</option>
+
+      </select>
+      <input type="datetime-local" id="email" placeholder="">
+      <br>
+      <br>
+      <a href="{{ url_for('video_feed')}}" id="loginBtn" class="hover_btn" target="_blank">Mark</a><br><br><br>
+      <a href="{{ url_for('table')}}" id="loginBtn" class="hover_btn" target="_blank">Check</a>
+    </div>
+    <!-- <div class="con">
+      <centre>
+        <label for="Attendance"
+          style="position: absolute;font: 2em sans-serif; padding: 10px;background-color:crimson;width:fit-content;border-radius: 0.5rem; left: 20px;">
+          MARK THE ATTENDANCE</label>
+      </centre>
+      <p id="email">Hindi</p>
+      <input type="datetime-local" id="email" placeholder="">
+      <br>
+      <br>
+      <a href="{{ url_for('video_feed')}}" id="loginBtn" class="hover_btn" target="_blank" temp="hindi">Mark</a><br><br><br>
+      <a href="{{ url_for('table')}}" id="loginBtn" class="hover_btn" target="_blank">Check</a>
+    </div>
+    <div class="con">
+      <label for="Attendance"
+        style="position: absolute;font: 2em sans-serif; padding: 10px;background-color:crimson;width:fit-content;border-radius: 0.5rem; left: 20px;">
+        MARK THE ATTENDANCE</label>
+
+        <p id="email">Maths</p>
+      <input type="datetime-local" id="email" placeholder="">
+      <br>
+      <br>
+      <a href="{{ url_for('video_feed')}}" id="loginBtn" class="hover_btn" target="_blank">Mark</a><br><br><br>
+      <a href="{{ url_for('table')}}" id="loginBtn" class="hover_btn" target="_blank">Check</a>
+    </div> -->
+  </section>
+
+  <!-- Footer -->
+  <!-- <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>A</span>ttendance <span>M</span>onitoring <span>System</span></h1>
+      </div>
+      <h2>Your Complete Web Solution</h2>
+      <p>Copyright © 2022 Sindura,Ekta,Adbul. All rights reserved</p>
+    </div>
+  </section> -->
+  <!-- End Footer -->
+</body>
+
+</html>

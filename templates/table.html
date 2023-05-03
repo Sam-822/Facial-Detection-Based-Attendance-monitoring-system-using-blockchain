@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Check the attendance</title>
+	<link rel="stylesheet" href="static/table.css">
+</head>
+
+<body>
+	<!-- Header -->
+	<section id="header">
+		<div class="header container">
+			<div class="nav-bar">
+				<div class="brand">
+					<a href="#hero">
+						<h1><span>A</span>ttandance <span>M</span>onitoring <span>S</span><span>ystem</span></h1>
+					</a>
+				</div>
+				<div class="nav-list">
+					<div class="hamburger">
+						<div class="bar"></div>
+					</div>
+					<ul>
+						<li><a href="#hero" data-after="Home">Home</a></li>
+						<li><a href="#services">AboutUs</a></li>
+						<li><a href="#contact" data-after="Contact">Contact</a></li>
+						<li><a href="{{ url_for('login')}}" target="_self">Login</a></li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Header -->
+	<div style="position:absolute;top: 300px;left: 600px;right:600px;background-color: var(--white);
+	  
+	
+	  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;">
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Time</th>
+				<th>Date</th>
+			</tr>
+			{% for row in attendance_records %}
+			<tr>
+				<td>{{ row['id']  }}</td>
+				<td>{{ row['name'] }}</td>
+				<td>{{ row['time'] }}</td>
+				<td>{{ row['date'] }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+
+</body>
+
+</html>
