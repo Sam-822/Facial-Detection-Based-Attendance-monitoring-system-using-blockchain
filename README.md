@@ -14,6 +14,10 @@ Install all the packages required for the project by opening a command prompt fr
 ```bash
   pip install -r requirements.txt
 ```
+In case some libraries are not installed, install the libraries manually using the command
+```bash
+  pip install "library_name" --user
+ ```
 
 Install NodeJs from the [official website](https://nodejs.org/en/download) to install nvm and npm.
 
