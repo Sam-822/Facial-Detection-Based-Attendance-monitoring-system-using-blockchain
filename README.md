@@ -25,7 +25,7 @@ Follow the steps shown [here](https://trufflesuite.com/docs/truffle/how-to/insta
 
 Download Ganache from the [official website](https://trufflesuite.com/ganache/)
 
-Run ganache, quickstart a blockchain network, go to settings, change the port number under "Server" to "8545" and enable "Automine".
+Run ganache, quickstart a blockchain network, go to settings, change the port number under "Server" to "8545", enable "Automine" and under the workspace tab click on "add project" and select the `truffle_config.js` file from the project directory.
 
 Go to the project root directory, open a command prompt in the directory and run the following command:
 ```bash
