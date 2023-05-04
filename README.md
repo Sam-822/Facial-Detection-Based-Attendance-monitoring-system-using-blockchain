@@ -33,3 +33,10 @@ To run the project on a local host, run the following command:
 ```bash
   python app.py
 ```
+
+
+
+## Authors
+
+- [@Abdul Samad](https://github.com/Sam-822)
+

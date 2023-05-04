@@ -19,7 +19,7 @@ with open('contract_abi.json', 'r') as f:
         contract_abi = json.load(f)
 
 # Define contract address and instantiate contract
-contract_address = '0xff66466abe9657e2A097EB90Dd611e730235B2A4'
+contract_address = '0x9058A0d72230aEc5c0de0d7dE601E18696fc5c13'
 contract = web3.eth.contract(address=contract_address, abi=contract_abi)
 
 
@@ -217,6 +217,7 @@ def register():
             cursor.execute('INSERT INTO accounts VALUES (NULL, % s, % s, % s)', (username, password, email, ))
             mysql.connection.commit()
             msg = 'You have successfully registered !'
+            return redirect(url_for('login'))
     elif request.method == 'POST':
         msg = 'Please fill out the form !'
     return render_template('register.html', msg = msg)
